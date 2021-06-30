@@ -7,6 +7,12 @@ import com.google.appinventor.components.common.ComponentCategory;
 import com.google.appinventor.components.runtime.AndroidNonvisibleComponent;
 import com.google.appinventor.components.runtime.ComponentContainer;
 import com.google.appinventor.components.runtime.EventDispatcher;
+import com.appodeal.ads.Appodeal;
+import com.appodeal.ads.Native;
+import com.appodeal.ads.NativeAd;
+import com.appodeal.ads.NativeAdView;
+import com.appodeal.ads.UserSettings;
+import com.appodeal.ads.utils.Log;
 
 @DesignerComponent(
         version = 1,
@@ -16,9 +22,7 @@ import com.google.appinventor.components.runtime.EventDispatcher;
         iconName = "images/extension.png")
 
 @SimpleObject(external = true)
-//Libraries
 @UsesLibraries(libraries = "appodeal.jar")
-//Permissions
 @UsesPermissions(permissionNames = "android.permission.ACCESS_NETWORK_STATE, android.permission.INTERNET, android.permission.ACCESS_COARSE_LOCATION, android.permission.WRITE_EXTERNAL_STORAGE, android.permission.ACCESS_WIFI_STATE, android.permission.VIBRATE, android.permission.ACCESS_FINE_LOCATION")
 @UsesApplicationMetadata(metaDataElements = {@MetaDataElement(name="com.google.android.gms.ads.APPLICATION_ID", value="[ADMOB_APP_ID]")})
 public class Appodeal extends AndroidNonvisibleComponent {
