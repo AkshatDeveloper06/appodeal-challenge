@@ -191,7 +191,7 @@ Appodeal.setRewardedVideoCallbacks(new RewardedVideoCallbacks() {
         Appodeal.show(activity, Appodeal.REWARDED_VIDEO);
     }
     @SimpleFunction()
-    public void CacheInterstitial() {
+    public void CacheRewarded() {
         Appodeal.setAutoCache(Appodeal.REWARDED_VIDEO, true);
         Appodeal.cache(activity, Appodeal.REWARDED_VIDEO);
     }
