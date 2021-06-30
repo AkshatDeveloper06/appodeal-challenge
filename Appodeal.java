@@ -40,7 +40,7 @@ public class Appodeal extends AndroidNonvisibleComponent {
 
     @SimpleFunction()
     public void Initialize(String appKey){
-    Appodeal.initialize(this, appKey, Appodeal.INTERSTITIAL | Appodeal.REWARDED_VIDEO | Appodeal.NATIVE | Appodeal.BANNER | Appodeal.MREC, consent);
+    Appodeal.initialize(activity, appKey, Appodeal.INTERSTITIAL | Appodeal.REWARDED_VIDEO | Appodeal.NATIVE | Appodeal.BANNER | Appodeal.MREC, consent);
     }
     @SimpleFunction()
     public void ShowInterstitial() {
