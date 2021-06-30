@@ -38,19 +38,19 @@ public class Appodeal extends AndroidNonvisibleComponent {
         this.context = container.$context();
     }
 
-    @SimpleFunction()
+    @SimpleFunction(description = "Initializes Appodeal")
     public void Initialize(String appKey){
     Appodeal.initialize(activity, appKey, Appodeal.INTERSTITIAL | Appodeal.REWARDED_VIDEO | Appodeal.NATIVE | Appodeal.BANNER | Appodeal.MREC, consent);
     }
-    @SimpleFunction()
+    @SimpleFunction(description = "Shows Appodeal Ads")
     public void ShowInterstitial() {
         Appodeal.show(activity, Appodeal.INTERSTITIAL);
     }
-    @SimpleFunction() 
+    @SimpleFunction(description = "Is Interstitial Loaded") 
     public void isInterstitialLoaded() {
        return Appodeal.isLoaded(Appodeal.INTERSTITIAL);
     }
-    @SimpleFunction() 
+    @SimpleFunction(description = "Sets up ads") 
     public void SetupAds() {
         Appodeal.setInterstitialCallbacks(new InterstitialCallbacks() {
   @Override
@@ -117,85 +117,85 @@ Appodeal.setRewardedVideoCallbacks(new RewardedVideoCallbacks() {
   }
 });
     }
-    @SimpleFunction()
+    @SimpleFunction(description = "Caches Interstitial")
     public void CacheInterstitial() {
         Appodeal.setAutoCache(Appodeal.INTERSTITIAL, true);
         Appodeal.cache(activity, Appodeal.INTERSTITIAL);
     }
-    @SimpleEvent()
+    @SimpleEvent(description = "On Interstitial Ad Loaded")
     public void InterstitialAdLoaded(){
         EventDispatcher.dispatchEvent(this, "InterstitialAdLoaded");
     }
-    @SimpleEvent()
+    @SimpleEvent(description = "On interstitial failed to load")
     public void InterstitialAdFailedToLoad(){
         EventDispatcher.dispatchEvent(this, "InterstitialAdFailedToLoad");
     }
-    @SimpleEvent()
+    @SimpleEvent(description = "On interstitial ad shown")
     public void InterstitialAdShown(){
         EventDispatcher.dispatchEvent(this, "InterstitialAdShown");
     }
-    @SimpleEvent()
+    @SimpleEvent(description = "On interstitial ad show failed")
     public void InterstitialAdShowFailed(){
         EventDispatcher.dispatchEvent(this, "InterstitialAdShowFailed");
     }
-    @SimpleEvent()
+    @SimpleEvent(description = "On interstitial ad clicked")
     public void InterstitialAdClicked(){
         EventDispatcher.dispatchEvent(this, "InterstitialAdClicked");
     }
-    @SimpleEvent()
+    @SimpleEvent(description = "On interstitial ad closed")
     public void InterstitialAdClosed(){
         EventDispatcher.dispatchEvent(this, "InterstitialAdClosed");
     }
-    @SimpleEvent()
+    @SimpleEvent(description = "On interstitial expired")
     public void InterstitialAdExpired(){
         EventDispatcher.dispatchEvent(this, "InterstitialAdExpired");
     }
-    @SimpleEvent()
+    @SimpleEvent(description = "")
     public void RewardedVideoLoaded(){
         EventDispatcher.dispatchEvent(this, "InterstitialAdExpired");
     }
-    @SimpleEvent()
+    @SimpleEvent(description = "On rewarded loaded")
     public void RewardedVideoLoaded(){
         EventDispatcher.dispatchEvent(this, "RewardedVideoLoaded");
     }
-    @SimpleEvent()
+    @SimpleEvent(description = "On rewarded video failed to load")
     public void RewardedVideoFailedToLoad(){
         EventDispatcher.dispatchEvent(this, "RewardedVideoFailedToLoad");
     }
-    @SimpleEvent()
+    @SimpleEvent(description = "On rewarded video shown")
     public void RewardedVideoShown(){
         EventDispatcher.dispatchEvent(this, "RewardedVideoShown");
     }
-    @SimpleEvent()
+    @SimpleEvent(description = "On rewarded show failed")
     public void RewardedVideoShowFailed(){
         EventDispatcher.dispatchEvent(this, "RewardedVideoShowFailed");
     }
-    @SimpleEvent()
+    @SimpleEvent(description = "On rewarded video clicked")
     public void RewardedVideoClicked(){
         EventDispatcher.dispatchEvent(this, "RewardedVideoClicked");
     }
-    @SimpleEvent()
+    @SimpleEvent(description = "On rewarded finished")
     public void RewardedVideoFinished(){
         EventDispatcher.dispatchEvent(this, "RewardedVideoFinished");
     }
-    @SimpleEvent()
+    @SimpleEvent(description = "On rewarded closed")
     public void RewardedVideoClosed(){
         EventDispatcher.dispatchEvent(this, "RewardedVideoClosed");
     }
-    @SimpleEvent()
+    @SimpleEvent(description = "On rewarded video expire")
     public void RewardedVideoExpired(){
         EventDispatcher.dispatchEvent(this, "RewardedVideoExpired");
     }
-    @SimpleFunction()
+    @SimpleFunction(description = "Shows rewarded ad")
     public void ShowRewarded() {
         Appodeal.show(activity, Appodeal.REWARDED_VIDEO);
     }
-    @SimpleFunction()
+    @SimpleFunction(description = "Caches the reward")
     public void CacheRewarded() {
         Appodeal.setAutoCache(Appodeal.REWARDED_VIDEO, true);
         Appodeal.cache(activity, Appodeal.REWARDED_VIDEO);
     }
-    @SimpleFunction()
+    @SimpleFunction(description = "Sets user id")
     public void SetUserId(String userId) {
         Appodeal.getUserSettings(activity).setUserID(userId)
     }
