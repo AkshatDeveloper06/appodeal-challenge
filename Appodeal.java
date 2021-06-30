@@ -12,11 +12,12 @@ import com.appodeal.ads.Native;
 import com.appodeal.ads.NativeAd;
 import com.appodeal.ads.NativeAdView;
 import com.appodeal.ads.UserSettings;
+import com.appodeal.ads.InterstitialCallbacks;
 import com.appodeal.ads.utils.Log;
 
 @DesignerComponent(
         version = 1,
-        description = "Appodeal Extension by Anshuman Misrha",
+        description = "Appodeal Extension by Anshuman Mishra",
         category = ComponentCategory.EXTENSION,
         nonVisible = true,
         iconName = "images/extension.png")
